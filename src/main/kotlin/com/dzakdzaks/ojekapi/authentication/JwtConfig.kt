@@ -1,13 +1,11 @@
 package com.dzakdzaks.ojekapi.authentication
 
-import com.dzakdzaks.ojekapi.role.controller.UserRoleController
 import com.dzakdzaks.ojekapi.user.controller.CustomerController
 import com.dzakdzaks.ojekapi.user.controller.DriverController
 import com.dzakdzaks.ojekapi.user.entity.User
 import com.dzakdzaks.ojekapi.util.constant.Constant
 import io.jsonwebtoken.Jwts
 import io.jsonwebtoken.SignatureAlgorithm
-import io.jsonwebtoken.io.Encoders
 import io.jsonwebtoken.security.Keys
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.context.annotation.Configuration
