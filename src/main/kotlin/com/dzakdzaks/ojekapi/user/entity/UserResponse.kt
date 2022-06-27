@@ -1,6 +1,6 @@
 package com.dzakdzaks.ojekapi.user.entity
 
-import com.dzakdzaks.ojekapi.role.entity.UserRole
+import com.dzakdzaks.ojekapi.userRole.entity.UserRole
 import org.bson.codecs.pojo.annotations.BsonId
 import org.litote.kmongo.newId
 import java.util.*

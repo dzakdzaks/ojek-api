@@ -1,7 +1,7 @@
-package com.dzakdzaks.ojekapi.role.service
+package com.dzakdzaks.ojekapi.userRole.service
 
-import com.dzakdzaks.ojekapi.role.entity.UserRole
-import com.dzakdzaks.ojekapi.role.repository.UserRoleRepository
+import com.dzakdzaks.ojekapi.userRole.entity.UserRole
+import com.dzakdzaks.ojekapi.userRole.repository.UserRoleRepository
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Service
 

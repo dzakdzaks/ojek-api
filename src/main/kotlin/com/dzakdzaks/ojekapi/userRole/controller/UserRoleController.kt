@@ -1,7 +1,7 @@
-package com.dzakdzaks.ojekapi.role.controller
+package com.dzakdzaks.ojekapi.userRole.controller
 
-import com.dzakdzaks.ojekapi.role.entity.UserRole
-import com.dzakdzaks.ojekapi.role.service.UserRoleService
+import com.dzakdzaks.ojekapi.userRole.entity.UserRole
+import com.dzakdzaks.ojekapi.userRole.service.UserRoleService
 import com.dzakdzaks.ojekapi.util.entity.BaseResponse
 import com.dzakdzaks.ojekapi.util.ext.toResponse
 import org.springframework.beans.factory.annotation.Autowired

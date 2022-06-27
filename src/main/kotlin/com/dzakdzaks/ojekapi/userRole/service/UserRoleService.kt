@@ -1,6 +1,6 @@
-package com.dzakdzaks.ojekapi.role.service
+package com.dzakdzaks.ojekapi.userRole.service
 
-import com.dzakdzaks.ojekapi.role.entity.UserRole
+import com.dzakdzaks.ojekapi.userRole.entity.UserRole
 
 interface UserRoleService {
     fun createUserRole(userRole: UserRole): Result<Boolean>

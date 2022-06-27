@@ -1,4 +1,4 @@
-package com.dzakdzaks.ojekapi.role.entity
+package com.dzakdzaks.ojekapi.userRole.entity
 
 import org.bson.codecs.pojo.annotations.BsonId
 import org.litote.kmongo.newId

@@ -1,7 +1,7 @@
-package com.dzakdzaks.ojekapi.role.repository
+package com.dzakdzaks.ojekapi.userRole.repository
 
 import com.dzakdzaks.ojekapi.database.DatabaseComponent
-import com.dzakdzaks.ojekapi.role.entity.UserRole
+import com.dzakdzaks.ojekapi.userRole.entity.UserRole
 import com.dzakdzaks.ojekapi.util.exception.ResponseException
 import com.dzakdzaks.ojekapi.util.ext.toResult
 import com.mongodb.client.MongoCollection

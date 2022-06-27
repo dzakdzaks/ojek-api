@@ -1,8 +1,7 @@
 package com.dzakdzaks.ojekapi.user.service
 
 import com.dzakdzaks.ojekapi.authentication.JwtConfig
-import com.dzakdzaks.ojekapi.role.repository.UserRoleRepository
-import com.dzakdzaks.ojekapi.role.service.UserRoleService
+import com.dzakdzaks.ojekapi.userRole.repository.UserRoleRepository
 import com.dzakdzaks.ojekapi.user.entity.*
 import com.dzakdzaks.ojekapi.user.repository.UserRepository
 import com.dzakdzaks.ojekapi.util.exception.ResponseException
