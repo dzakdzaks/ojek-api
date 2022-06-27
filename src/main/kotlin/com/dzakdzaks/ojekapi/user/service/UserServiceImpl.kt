@@ -25,7 +25,7 @@ class UserServiceImpl(
             val passwordInDb = it.password
             val passwordRequest = userLogin.password
             if (passwordInDb == passwordRequest) {
-                LoginResponse(token, it.toResponseUser(userRoleRepository.getUserRoleById(it.role).getOrThrow()))
+                LoginResponse(token, it.toResponseUser(userRoleRepository.getUserRoleById(it.role).getOrNull()))
             } else {
                 throw ResponseException("Password invalid")
             }
@@ -35,7 +35,7 @@ class UserServiceImpl(
     override fun getUserById(id: String): Result<UserResponse> {
         return userRepository.getUserById(id).map {
             it.toResponseUser(
-                userRoleRepository.getUserRoleById(it.role).getOrThrow()
+                userRoleRepository.getUserRoleById(it.role).getOrNull()
             )
         }
     }
@@ -43,7 +43,7 @@ class UserServiceImpl(
     override fun getUserByUsername(username: String): Result<UserResponse> {
         return userRepository.getUserByUsername(username).map {
             it.toResponseUser(
-                userRoleRepository.getUserRoleById(it.role).getOrThrow()
+                userRoleRepository.getUserRoleById(it.role).getOrNull()
             )
         }
     }

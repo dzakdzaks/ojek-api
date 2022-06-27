@@ -14,7 +14,7 @@ data class User(
     var createdDate: Date = Date(),
     var updatedDate: Date = Date()
 ) {
-    fun toResponseUser(userRole: UserRole): UserResponse {
+    fun toResponseUser(userRole: UserRole?): UserResponse {
         return UserResponse(
             username = username,
             role = userRole,
