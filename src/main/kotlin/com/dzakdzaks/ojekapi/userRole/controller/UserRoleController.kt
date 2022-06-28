@@ -21,7 +21,7 @@ class UserRoleController {
         return userRoleService.createUserRole(userRole).toResponse()
     }
 
-    @PostMapping(PATH_GET_USER_ROLE_BY_ID)
+    @GetMapping(PATH_GET_USER_ROLE_BY_ID)
     fun getUserRoleById(
         @PathVariable(name = "id") id: String
     ): BaseResponse<UserRole> {
