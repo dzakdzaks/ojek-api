@@ -30,12 +30,11 @@
 							}
 						},
 						"url": {
-							"raw": "{{base_url_ojek}}api/v1/user-role/create",
+							"raw": "{{base_url_ojek}}/user-role/create",
 							"host": [
-								"{{base_url_ojek}}api"
+								"{{base_url_ojek}}"
 							],
 							"path": [
-								"v1",
 								"user-role",
 								"create"
 							]
@@ -55,12 +54,11 @@
 							}
 						],
 						"url": {
-							"raw": "{{base_url_ojek}}api/v1/user-role/62b969541cedfa6d5aca29fe",
+							"raw": "{{base_url_ojek}}/user-role/62b969541cedfa6d5aca29fe",
 							"host": [
-								"{{base_url_ojek}}api"
+								"{{base_url_ojek}}"
 							],
 							"path": [
-								"v1",
 								"user-role",
 								"62b969541cedfa6d5aca29fe"
 							]
@@ -88,12 +86,11 @@
 							}
 						},
 						"url": {
-							"raw": "{{base_url_ojek}}api/v1/customer/register",
+							"raw": "{{base_url_ojek}}/customer/register",
 							"host": [
-								"{{base_url_ojek}}api"
+								"{{base_url_ojek}}"
 							],
 							"path": [
-								"v1",
 								"customer",
 								"register"
 							]
@@ -116,12 +113,11 @@
 							}
 						},
 						"url": {
-							"raw": "{{base_url_ojek}}api/v1/customer/login",
+							"raw": "{{base_url_ojek}}/customer/login",
 							"host": [
-								"{{base_url_ojek}}api"
+								"{{base_url_ojek}}"
 							],
 							"path": [
-								"v1",
 								"customer",
 								"login"
 							]
@@ -141,12 +137,11 @@
 							}
 						],
 						"url": {
-							"raw": "{{base_url_ojek}}api/v1/customer",
+							"raw": "{{base_url_ojek}}/customer",
 							"host": [
-								"{{base_url_ojek}}api"
+								"{{base_url_ojek}}"
 							],
 							"path": [
-								"v1",
 								"customer"
 							]
 						}
@@ -173,12 +168,11 @@
 							}
 						},
 						"url": {
-							"raw": "{{base_url_ojek}}api/v1/driver/register",
+							"raw": "{{base_url_ojek}}/driver/register",
 							"host": [
-								"{{base_url_ojek}}api"
+								"{{base_url_ojek}}"
 							],
 							"path": [
-								"v1",
 								"driver",
 								"register"
 							]
@@ -201,12 +195,11 @@
 							}
 						},
 						"url": {
-							"raw": "{{base_url_ojek}}api/v1/driver/login",
+							"raw": "{{base_url_ojek}}/driver/login",
 							"host": [
-								"{{base_url_ojek}}api"
+								"{{base_url_ojek}}"
 							],
 							"path": [
-								"v1",
 								"driver",
 								"login"
 							]
@@ -226,12 +219,11 @@
 							}
 						],
 						"url": {
-							"raw": "{{base_url_ojek}}api/v1/driver",
+							"raw": "{{base_url_ojek}}/driver",
 							"host": [
-								"{{base_url_ojek}}api"
+								"{{base_url_ojek}}"
 							],
 							"path": [
-								"v1",
 								"driver"
 							]
 						}
