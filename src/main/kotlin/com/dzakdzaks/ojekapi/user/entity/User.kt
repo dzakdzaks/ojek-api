@@ -21,7 +21,8 @@ data class User(
             username = username,
             role = userRole,
             createdDate = createdDate,
-            updatedDate = updatedDate
+            updatedDate = updatedDate,
+            location = location
         )
     }
 }
