@@ -29,7 +29,7 @@ class UserRepositoryImpl(
     }
 
     override fun getUserById(id: String): Result<User> {
-        return userCollection().findOneById(id).toResult("Username not found")
+        return userCollection().findOneById(id).toResult("User not found")
     }
 
     override fun getUserByUsername(username: String): Result<User> {

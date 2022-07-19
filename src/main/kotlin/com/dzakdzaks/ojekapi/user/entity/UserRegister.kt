@@ -1,5 +1,7 @@
 package com.dzakdzaks.ojekapi.user.entity
 
+import com.dzakdzaks.ojekapi.location.entity.Coordinate
+
 data class UserRegister(
     var username: String,
     var password: String
@@ -8,7 +10,8 @@ data class UserRegister(
         return User(
             username = username,
             password = password,
-            role = role
+            role = role,
+            location = Coordinate(0.0, 0.0)
         )
     }
 }
