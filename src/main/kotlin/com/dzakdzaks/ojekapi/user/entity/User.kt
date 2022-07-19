@@ -1,5 +1,6 @@
 package com.dzakdzaks.ojekapi.user.entity
 
+import com.dzakdzaks.ojekapi.location.entity.Coordinate
 import com.dzakdzaks.ojekapi.userRole.entity.UserRole
 import org.bson.codecs.pojo.annotations.BsonId
 import org.litote.kmongo.newId
@@ -12,7 +13,8 @@ data class User(
     var password: String,
     var role: String,
     var createdDate: Date = Date(),
-    var updatedDate: Date = Date()
+    var updatedDate: Date = Date(),
+    var location: Coordinate? = null,
 ) {
     fun toResponseUser(userRole: UserRole?): UserResponse {
         return UserResponse(

@@ -1,5 +1,6 @@
 package com.dzakdzaks.ojekapi.util.ext
 
+import com.dzakdzaks.ojekapi.location.entity.Coordinate
 import com.dzakdzaks.ojekapi.util.entity.BaseResponse
 import com.dzakdzaks.ojekapi.util.exception.ResponseException
 
@@ -25,4 +26,11 @@ fun <T> Result<T>.toResponse(): BaseResponse<T> {
     } else {
         BaseResponse.success(this.getOrNull())
     }
+}
+
+fun String.toCoordinateData(): Coordinate {
+    val coordinateStrings = split(",")
+    val lat = coordinateStrings[0].toDoubleOrNull() ?: 0.0
+    val lon = coordinateStrings[1].toDoubleOrNull() ?: 0.0
+    return Coordinate(lat, lon)
 }

@@ -1,5 +1,8 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
+val jjwtVersion: String = "0.11.5"
+val okHttpVersion: String = "4.10.0"
+
 plugins {
 	id("org.springframework.boot") version "2.7.1"
 	id("io.spring.dependency-management") version "1.0.11.RELEASE"
@@ -27,9 +30,11 @@ dependencies {
 
 	implementation("org.litote.kmongo:kmongo:4.6.0")
 
-	implementation("io.jsonwebtoken:jjwt-api:0.11.5")
-	runtimeOnly("io.jsonwebtoken:jjwt-impl:0.11.5")
-	runtimeOnly("io.jsonwebtoken:jjwt-jackson:0.11.5")
+	implementation("io.jsonwebtoken:jjwt-api:$jjwtVersion")
+	runtimeOnly("io.jsonwebtoken:jjwt-impl:$jjwtVersion")
+	runtimeOnly("io.jsonwebtoken:jjwt-jackson:$jjwtVersion")
+
+	implementation("com.squareup.okhttp3:okhttp:$okHttpVersion")
 }
 
 tasks.withType<KotlinCompile> {
