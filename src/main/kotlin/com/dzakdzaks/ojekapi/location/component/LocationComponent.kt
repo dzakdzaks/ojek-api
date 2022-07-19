@@ -15,6 +15,8 @@ class LocationComponent {
 
     private val client = OkHttpClient()
 
+    private val hereApiKey = System.getenv("HERE_API_KEY")
+
     private inline fun <reified T> getHttp(url: String): Result<T> {
         return try {
             val request = Request.Builder()
@@ -47,6 +49,7 @@ class LocationComponent {
             .replace(Key.COORDINATE, coordinateString)
             .replace(Key.NAME, name)
             .replace(Key.LIMIT, limit)
+            .replace(Key.HERE_API_KEY, hereApiKey)
         return getHttp(url)
     }
 
@@ -54,6 +57,7 @@ class LocationComponent {
         val coordinateString = "${coordinate.latitude},${coordinate.longitude}"
         val url = RESERVE_LOC
             .replace(Key.COORDINATE, coordinateString)
+            .replace(Key.HERE_API_KEY, hereApiKey)
         return getHttp(url)
     }
 
@@ -71,16 +75,17 @@ class LocationComponent {
             .replace(Key.COORDINATE_ORIGIN, coordinateOriginString)
             .replace(Key.COORDINATE_DESTINATION, coordinateDestinationString)
             .replace(Key.TRANSPORT_MODE, transportMode)
+            .replace(Key.HERE_API_KEY, hereApiKey)
         return getHttp(url)
     }
 
     companion object {
         const val SEARCH_LOC =
-            "https://discover.search.hereapi.com/v1/discover?at={{coordinate}}&limit={{limit}}&q={{name}}&apiKey=JwDQF4XiDtPJgOx3DcSgPPRGVvaIM56E0hDEP--R8OI"
+            "https://discover.search.hereapi.com/v1/discover?at={{coordinate}}&limit={{limit}}&q={{name}}&apiKey={{hereApiKey}}"
         const val RESERVE_LOC =
-            "https://revgeocode.search.hereapi.com/v1/revgeocode?at={{coordinate}}&lang=en-US&apiKey=JwDQF4XiDtPJgOx3DcSgPPRGVvaIM56E0hDEP--R8OI"
+            "https://revgeocode.search.hereapi.com/v1/revgeocode?at={{coordinate}}&lang=en-US&apiKey={{hereApiKey}}"
         const val ROUTES_POLYLINE_LOC =
-            "https://router.hereapi.com/v8/routes?transportMode={{transportMode}}&origin={{coordinate_origin}}&destination={{coordinate_destination}}&return=polyline&apikey=JwDQF4XiDtPJgOx3DcSgPPRGVvaIM56E0hDEP--R8OI"
+            "https://router.hereapi.com/v8/routes?transportMode={{transportMode}}&origin={{coordinate_origin}}&destination={{coordinate_destination}}&return=polyline&apikey={{hereApiKey}}"
     }
 
     object Key {
@@ -88,6 +93,7 @@ class LocationComponent {
         const val NAME = "{{name}}"
         const val LIMIT = "{{limit}}"
         const val TRANSPORT_MODE = "{{transportMode}}"
+        const val HERE_API_KEY = "{{hereApiKey}}"
 
         const val COORDINATE_ORIGIN = "{{coordinate_origin}}"
         const val COORDINATE_DESTINATION = "{{coordinate_destination}}"
