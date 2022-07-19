@@ -1,5 +1,6 @@
 package com.dzakdzaks.ojekapi.authentication
 
+import com.dzakdzaks.ojekapi.location.controller.LocationController
 import com.dzakdzaks.ojekapi.user.controller.CustomerController
 import com.dzakdzaks.ojekapi.user.controller.DriverController
 import com.dzakdzaks.ojekapi.user.entity.User
@@ -48,7 +49,9 @@ class JwtConfig: WebSecurityConfigurerAdapter() {
         )
 
         val getPermit = listOf(
-            "get"
+            "${LocationController.PATH_BASE}${LocationController.PATH_SEARCH}",
+            "${LocationController.PATH_BASE}${LocationController.PATH_RESERVE}",
+            "${LocationController.PATH_BASE}${LocationController.PATH_ROUTES}"
         )
 
         fun generateToken(user: User): String {
