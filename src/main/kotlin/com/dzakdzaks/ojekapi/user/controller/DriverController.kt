@@ -3,6 +3,7 @@ package com.dzakdzaks.ojekapi.user.controller
 import com.dzakdzaks.ojekapi.user.entity.*
 import com.dzakdzaks.ojekapi.user.service.UserService
 import com.dzakdzaks.ojekapi.util.entity.BaseResponse
+import com.dzakdzaks.ojekapi.util.exception.ResponseException
 import com.dzakdzaks.ojekapi.util.ext.toResponse
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.security.core.context.SecurityContextHolder
@@ -29,6 +30,7 @@ class DriverController {
     fun register(
         @RequestBody userRegister: UserRegister
     ): BaseResponse<Boolean> {
+        if (userRegister.username.isEmpty() || userRegister.password.isEmpty()) throw ResponseException("Username and Password cant empty")
         return userService.register(userRegister, "62b969941cedfa6d5aca2a00").toResponse()
     }
 
@@ -36,6 +38,7 @@ class DriverController {
     fun login(
         @RequestBody userLogin: UserLogin
     ): BaseResponse<LoginResponse> {
+        if (userLogin.username.isEmpty() || userLogin.password.isEmpty()) throw ResponseException("Username and Password cant empty")
         return userService.login(userLogin).toResponse()
     }
 
