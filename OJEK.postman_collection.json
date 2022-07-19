@@ -231,6 +231,99 @@
 					"response": []
 				}
 			]
+		},
+		{
+			"name": "Location",
+			"item": [
+				{
+					"name": "Search Location",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url_ojek}}/location/search?name=Masjid Almuhajirin&coordinate=-6.3064797,106.962724&limit=2",
+							"host": [
+								"{{base_url_ojek}}"
+							],
+							"path": [
+								"location",
+								"search"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Masjid Almuhajirin"
+								},
+								{
+									"key": "coordinate",
+									"value": "-6.3064797,106.962724"
+								},
+								{
+									"key": "limit",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Reserve Location",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url_ojek}}/location/reserve?coordinate=-6.3064797,106.962724",
+							"host": [
+								"{{base_url_ojek}}"
+							],
+							"path": [
+								"location",
+								"reserve"
+							],
+							"query": [
+								{
+									"key": "coordinate",
+									"value": "-6.3064797,106.962724"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Routes Location",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url_ojek}}/location/routes?transportMode=scooter&origin=-6.3064797,106.962724&destination=-6.3057918,106.9570109",
+							"host": [
+								"{{base_url_ojek}}"
+							],
+							"path": [
+								"location",
+								"routes"
+							],
+							"query": [
+								{
+									"key": "transportMode",
+									"value": "scooter"
+								},
+								{
+									"key": "origin",
+									"value": "-6.3064797,106.962724"
+								},
+								{
+									"key": "destination",
+									"value": "-6.3057918,106.9570109"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
 		}
 	]
 }
